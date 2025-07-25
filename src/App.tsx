@@ -12,6 +12,7 @@ import VisaCalculatorPage from './pages/VisaCalculatorPage';
 import CommunityPage from './pages/CommunityPage';
 import ProfilePage from './pages/ProfilePage';
 import AdminPage from './pages/AdminPage';
+import AuthPage from './pages/AuthPage';
 
 // Hooks
 import { useAuth } from './hooks/useAuth';
@@ -46,6 +47,7 @@ function App() {
         <main className="pb-16 md:pb-0">
           <Routes>
             <Route path="/" element={<HomePage />} />
+            <Route path="/auth" element={<AuthPage />} />
             <Route path="/wage-calculator" element={<WageCalculatorPage />} />
             <Route path="/visa-calculator" element={<VisaCalculatorPage />} />
             <Route path="/community" element={<CommunityPage />} />
