@@ -30,29 +30,76 @@ const HomePage: React.FC = () => {
               </p>
             </div>
 
-            {/* Quick Action Buttons */}
-            <div className="mt-10 max-w-md mx-auto sm:flex sm:justify-center md:mt-12 sm:max-w-3xl">
-              <div className="grid grid-cols-1 gap-4 sm:grid-cols-3 sm:gap-6 w-full">
-                <Link
-                  to="/wage-calculator"
-                  className="btn-primary text-center py-4 px-6 transform hover:scale-105 transition-all duration-200 shadow-lg"
-                >
-                  💰 {t('home.wageCalculator')}
-                </Link>
-                <Link
-                  to="/visa-calculator"
-                  className="btn-success text-center py-4 px-6 transform hover:scale-105 transition-all duration-200 shadow-lg"
-                >
-                  📋 {t('home.visaExtension')}
-                </Link>
-                <Link
-                  to="/community"
-                  className="btn-secondary text-center py-4 px-6 transform hover:scale-105 transition-all duration-200 shadow-lg"
-                >
-                  🌍 {t('nav.community')}
-                </Link>
-              </div>
-            </div>
+                                    {/* Quick Action Cards - 2025 Modern Design */}
+                        <div className="mt-10 max-w-4xl mx-auto md:mt-12">
+                          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 sm:gap-6">
+                            {/* Quick Wage Check */}
+                            <div className="group">
+                              <Link
+                                to="/wage-calculator"
+                                className="block p-6 bg-white rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 border border-gray-100"
+                              >
+                                <div className="flex items-center mb-4">
+                                  <div className="w-12 h-12 bg-gradient-to-br from-green-400 to-green-600 rounded-xl flex items-center justify-center text-white text-xl">
+                                    💰
+                                  </div>
+                                  <div className="ml-4">
+                                    <h3 className="text-lg font-semibold text-gray-900 group-hover:text-primary-600 transition-colors">
+                                      {t('home.quickWageCheck')}
+                                    </h3>
+                                  </div>
+                                </div>
+                                <p className="text-gray-600 text-sm">
+                                  Calculate your earnings instantly with Fair Work Australia rates
+                                </p>
+                              </Link>
+                            </div>
+
+                            {/* Wage Calculator */}
+                            <div className="group">
+                              <Link
+                                to="/wage-calculator"
+                                className="block p-6 bg-white rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 border border-gray-100"
+                              >
+                                <div className="flex items-center mb-4">
+                                  <div className="w-12 h-12 bg-gradient-to-br from-blue-400 to-blue-600 rounded-xl flex items-center justify-center text-white text-xl">
+                                    🧮
+                                  </div>
+                                  <div className="ml-4">
+                                    <h3 className="text-lg font-semibold text-gray-900 group-hover:text-primary-600 transition-colors">
+                                      {t('home.wageCalculator')}
+                                    </h3>
+                                  </div>
+                                </div>
+                                <p className="text-gray-600 text-sm">
+                                  Detailed wage tracking with job profiles and daily records
+                                </p>
+                              </Link>
+                            </div>
+
+                            {/* Visa Extension */}
+                            <div className="group">
+                              <Link
+                                to="/visa-calculator"
+                                className="block p-6 bg-white rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 border border-gray-100"
+                              >
+                                <div className="flex items-center mb-4">
+                                  <div className="w-12 h-12 bg-gradient-to-br from-purple-400 to-purple-600 rounded-xl flex items-center justify-center text-white text-xl">
+                                    📋
+                                  </div>
+                                  <div className="ml-4">
+                                    <h3 className="text-lg font-semibold text-gray-900 group-hover:text-primary-600 transition-colors">
+                                      {t('home.visaExtension')}
+                                    </h3>
+                                  </div>
+                                </div>
+                                <p className="text-gray-600 text-sm">
+                                  Track your 88/179 days for visa extension requirements
+                                </p>
+                              </Link>
+                            </div>
+                          </div>
+                        </div>
           </div>
         </div>
       </div>

@@ -5,6 +5,7 @@ import './i18n';
 
 // Components
 import Navbar from './components/layout/Navbar';
+import MobileNavbar from './components/layout/MobileNavbar';
 import LanguageModal from './components/common/LanguageModal';
 import HomePage from './pages/HomePage';
 import WageCalculatorPage from './pages/WageCalculatorPage';
@@ -13,6 +14,7 @@ import CommunityPage from './pages/CommunityPage';
 import ProfilePage from './pages/ProfilePage';
 import AdminPage from './pages/AdminPage';
 import AuthPage from './pages/AuthPage';
+import CalendarPage from './pages/CalendarPage';
 
 // Hooks
 import { useAuth } from './hooks/useAuth';
@@ -48,6 +50,7 @@ function App() {
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/auth" element={<AuthPage />} />
+            <Route path="/calendar" element={<CalendarPage />} />
             <Route path="/wage-calculator" element={<WageCalculatorPage />} />
             <Route path="/visa-calculator" element={<VisaCalculatorPage />} />
             <Route path="/community" element={<CommunityPage />} />
@@ -57,6 +60,9 @@ function App() {
             )}
           </Routes>
         </main>
+
+        {/* Mobile Navigation */}
+        <MobileNavbar />
 
         {/* Language Selection Modal */}
         {showLanguageModal && (
